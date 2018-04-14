@@ -54,7 +54,7 @@
 //char *strerror(int);
 
 /************ local prototypes *************/
-void restricted();
+//void restricted();
 void err_print(char *, const char *);
 void err_exit(char *, const char *);
 void msg_exit(char *);
@@ -329,7 +329,7 @@ int main(int argc, char **argv) {
 }
 
 // unused atm
-void restricted(){
+/* void restricted(){
     //uint32_t ip = 1244952093; // Works
     //uint32_t ip = 0100002004; // Doesn't work, doesn't pick up Octal
     uint32_t ip = 0x4a34761d;   // Works but limits to 32-bit unsigned integer limit
@@ -337,6 +337,7 @@ void restricted(){
     ip_addr.s_addr = ip;
     printf("The IP address is %s\n", inet_ntoa(ip_addr));
 }
+*/
 
 /*** print custom message and errno message and continue ***/
 void err_print(char *msg, const char *errmsg) {
